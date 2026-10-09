@@ -1,75 +1,62 @@
-# React + TypeScript + Vite
+# team builder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Projeto desenvolvido para a avaliacao N1 da disciplina de Programacao para Sistemas Web. Consiste numa aplicacao Full Stack com interface em React e servidor web em Fastify, focada na gestao de equipas e perfis de treinadores.
 
-Currently, two official plugins are available:
+## Integrantes
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+* Ian Vieira Correa
+* RYANN FLAVYO ALVES HONORATO LESSA
+* PIETRO HERRERA VASCONCELLOS DE ALMEIDA
+* GABRIEL PERUZZI RODRIGUES
+* JOAO ANTONIO FERREIRA MACHADO DA MATTA
 
-## React Compiler
+## Tecnologias Utilizadas
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* Front-end: React, Vite, TypeScript
+* Back-end: Node.js, Fastify, TypeScript
+* Base de Dados: SQLite com better-sqlite3
 
-## Expanding the ESLint configuration
+## Funcionalidades Principais
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Fluxo de autenticacao simulado com login e logout funcionais.
+* Navegacao entre multiplas paginas atraves de um menu central.
+* CRUD completo de Perfis e Equipas consumindo a nossa propria API.
+* Tratamento visual de estados assincronos como carregamento, erros e ausencia de dados.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Requisitos Previos
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Certifique-se de que tem o Node.js instalado na sua maquina antes de prosseguir com a instalacao.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Como Instalar e Executar
 
-```
+O sistema e composto por duas partes separadas. E obrigatorio abrir dois terminais distintos para correr a aplicacao corretamente.
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+### 1. Servidor Back-end
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Abra o primeiro terminal na pasta raiz do projeto e siga os passos:
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Aceda a pasta do servidor:
+   cd back-end
 
-```
+2. Instale as dependencias necessarias:
+   npm install
+
+3. Inicie o servidor em modo de desenvolvimento:
+   npm run dev
+
+O servidor Fastify estara a correr no endereco http://localhost:3000. Nao feche este terminal.
+
+### 2. Interface Front-end
+
+Abra um segundo terminal na pasta raiz do projeto e siga os passos:
+
+1. Aceda a pasta da interface:
+   cd front-end
+
+2. Instale as dependencias necessarias:
+   npm install
+
+3. Inicie a aplicacao React:
+   npm run dev
+
+O site ficara disponivel e pronto a utilizar no seu navegador no endereco http://localhost:5173.
