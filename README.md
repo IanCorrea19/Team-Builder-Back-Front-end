@@ -4,7 +4,7 @@ Projeto desenvolvido para a avaliacao N1 da disciplina de Programacao para Siste
 
 ## Integrantes
 
-* Ian Vieira Correa
+* IAN VIEIRA CORRÊA
 * RYANN FLAVYO ALVES HONORATO LESSA
 * PIETRO HERRERA VASCONCELLOS DE ALMEIDA
 * GABRIEL PERUZZI RODRIGUES
